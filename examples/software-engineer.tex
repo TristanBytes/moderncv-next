@@ -1,0 +1,40 @@
+\documentclass[11pt,a4paper,sans]{moderncv}
+
+\moderncvstyle{classic}
+\moderncvcolor{black}
+
+\usepackage[scale=0.82]{geometry}
+\usepackage{../styles/moderncv-next}
+
+\name{Jane}{Doe}
+\title{Senior Software Engineer}
+\address{Example City}{Germany}
+\email{jane.doe@example.com}
+
+\begin{document}
+\makecvtitle
+
+\section{Profile}
+\cvprofile{
+Senior Software Engineer with experience in embedded systems,
+Linux platforms and software architecture.
+}
+
+\section{Skills}
+\cvskill{Languages}{C, C++, Python}
+\cvskill{Embedded}{Embedded Linux, Buildroot, CAN, MQTT}
+\cvskill{Tools}{Docker, Git, CI/CD}
+
+\section{Experience}
+\cvjob
+{2021--today}
+{Senior Software Engineer}
+{Example Robotics GmbH}
+{Example City}
+{
+\cvbullet{Development of embedded Linux systems}
+\cvbullet{Software architecture for industrial applications}
+\cvbullet{Mentoring of junior developers}
+}
+
+\end{document}

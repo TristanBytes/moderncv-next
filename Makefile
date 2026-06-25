@@ -23,3 +23,4 @@ clean:
 
 shell:
 	docker run --rm -it -v "$$(pwd)":/work -w /work $(IMAGE) bash
+
