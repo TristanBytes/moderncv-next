@@ -1,33 +1,18 @@
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesPackage{moderncv-next}[2026/06/25 Modern extensions for moderncv]
+\ProvidesPackage{moderncv-next}[2026/06/26 Thin extensions for moderncv]
 
 \RequirePackage{enumitem}
-\RequirePackage{xcolor}
 
-\definecolor{cvnextaccent}{HTML}{222222}
-
-\newcommand{\cvprofile}[1]{%
+\newcommand{\cvnextprofile}[1]{%
   \cvitem{}{#1}
 }
 
-\newcommand{\cvnextskill}[2]{%
-  \cvitem{\textbf{#1}}{#2}
+\newenvironment{cvnextbullets}{%
+  \begin{itemize}[leftmargin=*, itemsep=0.15em, topsep=0.2em]
+}{%
+  \end{itemize}
 }
 
-\newcommand{\cvbullet}[1]{%
+\newcommand{\cvnextbullet}[1]{%
   \item #1
-}
-
-\newcommand{\cvjob}[5]{%
-  \cventry
-  {#1}
-  {#2}
-  {#3}
-  {#4}
-  {}
-  {
-    \begin{itemize}[leftmargin=*, itemsep=0.15em, topsep=0.2em]
-      #5
-    \end{itemize}
-  }
 }
