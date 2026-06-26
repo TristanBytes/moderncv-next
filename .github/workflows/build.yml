@@ -1,0 +1,26 @@
+name: Build examples
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Build Docker image
+        run: make image
+
+      - name: Build example PDF
+        run: make pdf
+
+      - name: Upload PDF artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: software-engineer-pdf
+          path: output/software-engineer.pdf
